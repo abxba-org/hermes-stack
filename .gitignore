@@ -1,0 +1,42 @@
+# Whitelist-style: ignore everything, then un-ignore the backup set.
+# A stray future file (e.g. a renamed .env) can never be committed by accident.
+/*
+
+# tracked
+!/.gitignore
+!/README.md
+!/config.yaml
+!/SOUL.md
+!/PERSONAS.md
+!/memories/
+!/skills/
+!/plugins/
+!/profiles/
+!/cron/
+!/slack-manifest.json
+!/channel_directory.json
+!/av-ca.pem
+
+# never track, even inside un-ignored dirs
+secrets
+*.env
+*.env.*
+.env*
+auth.json
+*.pem
+!av-ca.pem
+*.key
+credentials.json
+tokens.json
+*.db
+*.db-shm
+*.db-wal
+*.sqlite*
+
+# runtime noise inside tracked dirs
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+.venv/
+*.log

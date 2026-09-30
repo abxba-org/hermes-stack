@@ -1,0 +1,180 @@
+{
+  "updated_at": "2026-09-30T18:59:51.360999",
+  "platforms": {
+    "slack": [
+      {
+        "id": "C0C4HEVJC8N",
+        "name": "all-hermes-ovh",
+        "type": "channel"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790791789.238879",
+        "name": "abxba",
+        "type": "dm",
+        "thread_id": "1790791789.238879"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790640680.146279",
+        "name": "abxba",
+        "type": "dm",
+        "thread_id": "1790640680.146279"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790638286.995319",
+        "name": "abxba / topic 1790638286.995319",
+        "type": "dm",
+        "thread_id": "1790638286.995319"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790638782.968129",
+        "name": "abxba / topic 1790638782.968129",
+        "type": "dm",
+        "thread_id": "1790638782.968129"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790633608.885469",
+        "name": "abxba",
+        "type": "dm",
+        "thread_id": "1790633608.885469"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790636878.736279",
+        "name": "abxba / topic 1790636878.736279",
+        "type": "dm",
+        "thread_id": "1790636878.736279"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790635365.367229",
+        "name": "abxba / topic 1790635365.367229",
+        "type": "dm",
+        "thread_id": "1790635365.367229"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790633979.223259",
+        "name": "abxba / topic 1790633979.223259",
+        "type": "dm",
+        "thread_id": "1790633979.223259"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790514532.713049",
+        "name": "abxba / topic 1790514532.713049",
+        "type": "dm",
+        "thread_id": "1790514532.713049"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790516876.399419",
+        "name": "abxba / topic 1790516876.399419",
+        "type": "dm",
+        "thread_id": "1790516876.399419"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790515188.902129",
+        "name": "abxba / topic 1790515188.902129",
+        "type": "dm",
+        "thread_id": "1790515188.902129"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790502780.650639",
+        "name": "abxba / topic 1790502780.650639",
+        "type": "dm",
+        "thread_id": "1790502780.650639"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790502770.392089",
+        "name": "abxba / topic 1790502770.392089",
+        "type": "dm",
+        "thread_id": "1790502770.392089"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790468301.427099",
+        "name": "abxba / topic 1790468301.427099",
+        "type": "dm",
+        "thread_id": "1790468301.427099"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790465332.780999",
+        "name": "abxba",
+        "type": "dm",
+        "thread_id": "1790465332.780999"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790465423.648109",
+        "name": "abxba / topic 1790465423.648109",
+        "type": "dm",
+        "thread_id": "1790465423.648109"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790465371.349989",
+        "name": "abxba / topic 1790465371.349989",
+        "type": "dm",
+        "thread_id": "1790465371.349989"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790465333.866109",
+        "name": "abxba",
+        "type": "dm",
+        "thread_id": "1790465333.866109"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790465332.189639",
+        "name": "abxba",
+        "type": "dm",
+        "thread_id": "1790465332.189639"
+      },
+      {
+        "id": "C0C4HEVJC8N:1790463684.554869",
+        "name": "all-hermes-ovh / topic 1790463684.554869",
+        "type": "group",
+        "thread_id": "1790463684.554869"
+      },
+      {
+        "id": "C0C4HEVJC8N:1790452968.194239",
+        "name": "all-hermes-ovh / topic 1790452968.194239",
+        "type": "group",
+        "thread_id": "1790452968.194239"
+      },
+      {
+        "id": "C0C4HEVJC8N:1790451179.647309",
+        "name": "all-hermes-ovh / topic 1790451179.647309",
+        "type": "group",
+        "thread_id": "1790451179.647309"
+      },
+      {
+        "id": "C0C4HEVJC8N:1790451092.435239",
+        "name": "all-hermes-ovh / topic 1790451092.435239",
+        "type": "group",
+        "thread_id": "1790451092.435239"
+      },
+      {
+        "id": "C0C4HEVJC8N:1790448687.039159",
+        "name": "all-hermes-ovh / topic 1790448687.039159",
+        "type": "group",
+        "thread_id": "1790448687.039159"
+      },
+      {
+        "id": "C0C4HEVJC8N:1790443840.137059",
+        "name": "all-hermes-ovh / topic 1790443840.137059",
+        "type": "group",
+        "thread_id": "1790443840.137059"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790364174.059419",
+        "name": "abxba",
+        "type": "dm",
+        "thread_id": "1790364174.059419"
+      },
+      {
+        "id": "C0C4HEVJC8N:1790363826.915179",
+        "name": "all-hermes-ovh / topic 1790363826.915179",
+        "type": "group",
+        "thread_id": "1790363826.915179"
+      },
+      {
+        "id": "D0C4DA5F6N7:1790363416.172979",
+        "name": "abxba",
+        "type": "dm",
+        "thread_id": "1790363416.172979"
+      }
+    ]
+  }
+}
