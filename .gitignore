@@ -13,6 +13,7 @@
 !/plugins/
 !/profiles/
 !/cron/
+!/scripts/
 !/slack-manifest.json
 !/channel_directory.json
 !/av-ca.pem

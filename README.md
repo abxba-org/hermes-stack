@@ -4,7 +4,7 @@ Versioned backup of the Hermes Agent configuration on the OVH VPS (`vps-1558ffa7
 
 ## What's tracked
 
-config.yaml (settings only, no secrets), SOUL.md, PERSONAS.md, memories/, skills/, plugins/, profiles/ (structure only — profile logs are stripped), cron/ (job definitions live in config.yaml; this tracks runtime state), slack-manifest.json, channel_directory.json, av-ca.pem (agent-vault CA cert).
+config.yaml (settings only, no secrets), SOUL.md, PERSONAS.md, memories/, skills/, plugins/, profiles/ (structure only — profile logs are stripped), cron/, scripts/ (cron job scripts incl. backup-sync.sh, which also runs this sync), slack-manifest.json, channel_directory.json, av-ca.pem (agent-vault CA cert).
 
 ## What's excluded, on purpose
 

@@ -277,15 +277,15 @@
     "created_by": "agent",
     "first_seen_at": null,
     "last_patched_at": "2026-09-27T17:43:09.966582+00:00",
-    "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-27T00:10:07.969423+00:00",
-    "last_viewed_at": "2026-09-27T00:10:07.967142+00:00",
+    "last_reused_patch_generation": 9,
+    "last_used_at": "2026-09-30T21:43:24.484939+00:00",
+    "last_viewed_at": "2026-09-30T21:43:24.482665+00:00",
     "patch_count": 9,
     "patch_generation": 9,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 2,
+    "view_count": 2
   },
   "voice-calling": {
     "archived_at": null,
