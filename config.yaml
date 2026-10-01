@@ -2376,3 +2376,8 @@ command_allowlist:
   - script execution via heredoc
 approvals:
   destructive_slash_confirm: false
+mcp_servers:
+  skillspector:
+    command: /home/ubuntu/.local/bin/skillspector
+    args:
+      - mcp
