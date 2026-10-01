@@ -23,15 +23,15 @@
       "schedule_display": "every 360m",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-30T21:43:14.316787+00:00",
-      "next_run_at": "2026-10-01T21:45:07.032411+00:00",
-      "last_run_at": "2026-10-01T09:45:06.467541+00:00",
+      "next_run_at": "2026-10-02T03:46:07.022276+00:00",
+      "last_run_at": "2026-10-01T15:45:12.015179+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -43,16 +43,16 @@
       "workdir": null,
       "failure_deliver": "slack:D0C4DA5F6N7:1790514532.713049",
       "last_dispatch": {
-        "scheduled_at": "2026-10-01T15:45:06.467541+00:00",
-        "dispatched_at": "2026-10-01T15:45:06.996933+00:00",
-        "lateness_seconds": 0.5,
+        "scheduled_at": "2026-10-01T21:45:12.015179+00:00",
+        "dispatched_at": "2026-10-01T21:46:06.999033+00:00",
+        "lateness_seconds": 55.0,
         "kind": "on_time"
       },
       "fire_claim": {
-        "at": "2026-10-01T15:45:09.100449+00:00",
-        "by": "vps-1558ffa7:220030:4a7dd221a23d4d4c8846e75c22058700"
+        "at": "2026-10-01T21:46:08.541725+00:00",
+        "by": "vps-1558ffa7:220030:fdf7de1f2e8c4e6b9e38099c28b07409"
       }
     }
   ],
-  "updated_at": "2026-10-01T15:45:09.101448+00:00"
+  "updated_at": "2026-10-01T21:46:08.542635+00:00"
 }
