@@ -1,5 +1,13 @@
 # Hermes VPS Migration — master plan
 
+**Operational plan of record: `abxba-org/vps-migration-contabo`** (target: Contabo EU,
+`vps-contabo`, 8GB/100GB; fresh provision + selective state copy; vault DATA-copy, never
+rebuild; old box stays live until explicit operator GO). This repo's `migrations/` is the
+artifact kit that plan calls: vault export/import scripts, host snapshot, guided restore.
+Where the two differ, the Contabo plan wins (e.g. dedicated `hermes` user uid 1003 layout,
+§3.4 write-freeze data copy; `export-vault.sh`/`import-vault.sh` here are the equivalent
+one-shot bundler of that same data-copy semantics).
+
 Migration of the full Hermes + agent-vault stack from the OVH VPS
 (`vps-1558ffa7` / `vps-ovh.tail95f2ee.ts.net`) to a new VPS.
 

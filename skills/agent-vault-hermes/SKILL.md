@@ -31,6 +31,9 @@ Full record: repo `DUDE616/agent-vault-setup` (docs/SETUP-LOG.md = every command
 - Passthrough rules = allowlist + audit, NO injection: they are data-egress paths; Slack tokens still live in hermes .env (future phase: broker them, incl. substitutions feature for URL-embedded tokens).
 - Never enter credentials via CLI argv (sudo/journal log argv) — web UI or stdin only.
 
+## Migration kit (2026-10)
+Complete VPS-migration bundle lives in master repo `abxba-org/hermes-config` under `migrations/`: `agent-vault/export-vault.sh` + `import-vault.sh` move the EXACT vault (stop services → tar agent-vault.db + ca + /etc/agent-vault/{master,owner.creds,hermes-agent-token} + /etc/av-hermes.nft → scp over Tailscale → restore, same version 0.39.3), `VAULT-MIGRATION.md` (exact-move vs fresh re-seed + gotchas), `MIGRATION.md` transfer matrix, `host-snapshot/` (non-secret host configs), guided `restore-new-vps.sh`. Hermes config backup cron now 12h (job 0ed471b7d0b5); ticker stalls are fixed by `sudo systemctl restart hermes-gateway.service`.
+
 ## Verification pattern
 fresh-env one-shot (`env -i HOME=... hermes -z`) + vault request log (`GET /v1/vaults/hermes/logs` w/ owner cookie) + /proc scan + external nc scan of 14321/14322 + direct-vs-proxied curl as the hermes uid.
 

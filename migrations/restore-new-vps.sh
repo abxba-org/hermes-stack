@@ -5,8 +5,10 @@
 set -euo pipefail
 
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
-NEW_HERMES_HOME="${HERMES_HOME:-$HOME/.hermes}"
-HERMES_USER="${HERMES_USER:-ubuntu}"   # set HERMES_USER=hermes for the dedicated-user layout
+NEW_HERMES_HOME="${HERMES_HOME:-/home/hermes/.hermes}"
+# Contabo plan (abxba-org/vps-migration-contabo) locks the dedicated-user layout:
+# hermes uid 1003, no sudo, gateway system unit. Override only if deliberately deviating.
+HERMES_USER="${HERMES_USER:-hermes}"
 
 banner() { printf '\n===== %s =====\n' "$*"; }
 
