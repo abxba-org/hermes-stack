@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Define the repository path (Change this to your external drive or local path)
+export RESTIC_REPOSITORY="$HOME/restic/restic-repo"
+export RESTIC_PASSWORD_FILE=<redacted>
+
+# 1. Run the backup (Add as many folders as you want, separated by spaces)
+echo "Starting backup..."
+restic backup /home/ubuntu/CODE /home/ubuntu/docs
+
+
+# 2. Prune old backups (Keeps 7 daily, 4 weekly, and 12 monthly snapshots)
+echo "Cleaning up old snapshots..."
+restic forget --keep-daily 7 --keep-weekly 4 --keep-monthly 12 --prune
+
+# 3. Verify repository integrity
+echo "Checking repository..."
+restic check
+
+echo "Backup process complete!"

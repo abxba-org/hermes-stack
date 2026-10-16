@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-10-01T21:45:59.486554",
+  "updated_at": "2026-10-02T00:04:36.560958",
   "platforms": {
     "slack": [
       {
         "id": "C0C4HEVJC8N",
         "name": "all-hermes-ovh",
         "type": "channel"
+      },
+      {
+        "id": "C0C4HEVJC8N:1790894403.007649",
+        "name": "all-hermes-ovh / topic 1790894403.007649",
+        "type": "group",
+        "thread_id": "1790894403.007649"
       },
       {
         "id": "D0C4DA5F6N7:1790851774.643249",

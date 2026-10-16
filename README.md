@@ -25,6 +25,17 @@ chmod 600 ~/.hermes/config.yaml
 # Secrets (.env, auth.json) are NOT in the repo — restore them separately from a vault/backup.
 ```
 
+## Migration
+
+Everything needed to move the stack to a new VPS lives in `migrations/`:
+
+- `MIGRATION.md` — what transfers vs what must be re-entered, restore order
+- `restore-new-vps.sh` — guided step-by-step restore (secrets stay manual)
+- `capture-host-snapshot.sh` — refreshes `host-snapshot/` (crontab, nftables, unit files, tailscale, versions — non-secret)
+- `agent-vault/` — `export-vault.sh` (old VPS) + `import-vault.sh` (new VPS) move the
+  EXACT vault (credentials, rules, logs); `VAULT-MIGRATION.md` covers the move and the
+  fresh re-seed path; `upstream/` is a vendored snapshot of `abxba-org/agent-vault-setup`
+
 ## Maintenance
 
 Re-run the copy + commit when config/skills/plugins change materially. The working tree lives at `~/.hermes-git/hermes-config` (copy, not symlinks — git never touches the live `~/.hermes`).

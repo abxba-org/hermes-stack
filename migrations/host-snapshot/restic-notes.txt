@@ -1,0 +1,1 @@
+password file: ~/.restic_password (0600, NOT copied — back it up to the vault manually)

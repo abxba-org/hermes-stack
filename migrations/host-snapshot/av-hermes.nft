@@ -1,0 +1,14 @@
+# agent-vault hermes-uid egress scoping (persisted 2026-09-30)
+# uid 1003 may reach ONLY the vault's loopback ports + DNS; all other output drops.
+# Deviation from RUNBOOK Step 4: 14321 added — AGENT_VAULT_ADDR points there and the
+# gateway client must re-fetch from the mgmt API after a restart.
+table inet av_hermes {
+  chain output {
+    type filter hook output priority 10; policy accept;
+    skuid 1003 ip daddr 127.0.0.1 tcp dport 14321 counter accept
+    skuid 1003 ip daddr 127.0.0.1 tcp dport 14322 counter accept
+    skuid 1003 udp dport 53 counter accept
+    skuid 1003 tcp dport 53 counter accept
+    skuid 1003 counter drop
+  }
+}

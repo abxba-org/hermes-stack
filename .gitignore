@@ -17,6 +17,7 @@
 !/slack-manifest.json
 !/channel_directory.json
 !/av-ca.pem
+!/migrations/
 
 # never track, even inside un-ignored dirs
 secrets

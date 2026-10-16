@@ -1,0 +1,3 @@
+canonical repo: https://github.com/abxba-org/hevy.git (private)
+crontab entry: 12h hevy_watch.py --tz +05:30 (see crontab.txt)
+secret: ~/HEVY/.hevy_env HEVY_API_KEY — re-enter manually, gitignored

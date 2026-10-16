@@ -1,0 +1,13 @@
+# /etc/systemd/system/av-hermes-nftables.service
+[Unit]
+Description=agent-vault: persist inet av_hermes egress scoping for uid 1003 (hermes)
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStartPre=-/usr/sbin/nft delete table inet av_hermes
+ExecStart=/usr/sbin/nft -f /etc/av-hermes.nft
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

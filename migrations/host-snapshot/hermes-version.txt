@@ -1,0 +1,6 @@
+Hermes Agent v0.21.5+4923.g1a269fc (2026.9.24) · upstream 1a269fcd
+Install directory: /home/ubuntu/.hermes/hermes-agent
+Install method: git
+Python: 3.14.7
+OpenAI SDK: 2.24.0
+Update available — run 'hermes update'

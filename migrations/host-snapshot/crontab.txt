@@ -1,0 +1,9 @@
+# Healthchecks.io heartbeat ping (ABXBA-16)
+0 */4 * * * /usr/bin/curl -fsS -m 10 --retry 3 https://hc-ping.com/7af97dba-6a41-4d96-b68d-4832b304c497 >/dev/null 2>&1
+
+# Restic local backups
+# DISABLED 2026-10-04 (dual-writer bug: root systemd timers own the local repo; legacy cron broke the index) 0 2 * * * /home/ubuntu/scripts/restic_backup.sh > /home/ubuntu/scripts/backup.log 2>&1
+
+
+# Hevy workout watcher: every 12h, new-workout summary to Slack (GET-only)
+0 */12 * * * . /home/ubuntu/HEVY/.hevy_env && cd /home/ubuntu/HEVY && /usr/bin/python3 /home/ubuntu/HEVY/hevy_watch.py --tz +05:30 >> /home/ubuntu/HEVY/watch.log 2>&1
