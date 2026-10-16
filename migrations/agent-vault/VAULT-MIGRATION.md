@@ -46,6 +46,12 @@ record). Differences for a fresh box:
   + ReadWritePaths. `StateDirectory=agent-vault` must exist or the unit crash-loops (226).
 - `agent-vault server stop` takes no --address flag; `master-password change` wants a TTY.
 - Never pass credentials via CLI argv (sudo/journal log argv) — stdin or web UI only.
+  `vault credential get` (value read-back) FAILS with "Member role required" even for the
+  instance owner with vault admin role (quirk, affects every key incl. OPENROUTER_API_KEY)
+  — equality verification is web-UI-only; CLI `vault credential list` confirms existence.
+- Pre-seeded recovery credentials (2026-10-16): RESTIC_PASSWORD, HEVY_API_KEY in vault
+  `hermes` — they travel with the vault export bundle; keep source files
+  (~/.restic_password, ~/HEVY/.hevy_env) in sync or delete them after migration.
 - The 14321 allow rule for uid 1003 is REQUIRED in nftables — the gateway re-fetches
   credentials from mgmt after restart; 14322+DNS-only rulesets break it.
 - `nftables.service` stays DISABLED on the host (its conf flushes docker tables); the
