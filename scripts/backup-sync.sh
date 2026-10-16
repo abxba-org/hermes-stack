@@ -44,6 +44,11 @@ find skills plugins profiles cron memories scripts \
         -o -name '.env*' -o -name '*.env' \) -delete 2>/dev/null || true
 rm -f profiles/*/logs/* 2>/dev/null || true
 
+# refresh host snapshot (non-secret: crontab, nftables, unit files, tailscale, versions)
+# so the migration snapshot stays current with every sync
+bash "$WT/migrations/capture-host-snapshot.sh" >/dev/null 2>&1 \
+    || log "WARN: host-snapshot capture failed"
+
 # --- secret-scan gate: abort BEFORE commit/push on real credential patterns ---
 HITS=$(grep -rInE \
   '(ghp_[A-Za-z0-9]{36}|github_pat_[A-Za-z0-9_]{22,}|gho_[A-Za-z0-9]{36}|ghs_[A-Za-z0-9]{36}|sk-ant-[A-Za-z0-9-]{20,}|xox[baprs]-[A-Za-z0-9-]{10,}|AIza[0-9A-Za-z_-]{35}|glpat-[A-Za-z0-9_-]{20,}|shpat_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{40,}|-----BEGIN [A-Z ]*PRIVATE KEY-----)' \
