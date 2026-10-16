@@ -32,6 +32,7 @@ chmod 600 ~/.hermes/config.yaml
 Everything needed to move the stack to a new VPS lives in `migrations/` (full detail in `migrations/MIGRATION.md`):
 
 - `MIGRATION.md` — transfer matrix (what moves vs what must be re-entered), restore order
+- `USER.md` — the operator's own step-by-step checklist (Step 0 → decommission, gates marked)
 - `restore-new-vps.sh` — guided step-by-step restore (secrets stay manual; defaults match the Contabo plan's dedicated `hermes` user layout)
 - `capture-host-snapshot.sh` — refreshes `host-snapshot/` (crontab, nftables, unit files, tailscale, versions — non-secret)
 - `agent-vault/` — `export-vault.sh` (old VPS) + `import-vault.sh` (new VPS) move the

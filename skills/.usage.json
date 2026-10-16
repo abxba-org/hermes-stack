@@ -53,15 +53,15 @@
     "created_by": "learn",
     "first_seen_at": null,
     "last_patched_at": "2026-10-16T16:57:42.464783+00:00",
-    "last_reused_patch_generation": 9,
-    "last_used_at": "2026-10-16T16:56:34.151650+00:00",
-    "last_viewed_at": "2026-10-16T16:56:34.149148+00:00",
+    "last_reused_patch_generation": 10,
+    "last_used_at": "2026-10-16T17:00:04.037624+00:00",
+    "last_viewed_at": "2026-10-16T17:00:04.035056+00:00",
     "patch_count": 10,
     "patch_generation": 10,
     "pinned": false,
     "state": "active",
-    "use_count": 10,
-    "view_count": 10
+    "use_count": 11,
+    "view_count": 11
   },
   "blocked-page-recovery": {
     "archived_at": null,
