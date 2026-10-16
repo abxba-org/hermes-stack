@@ -1,7 +1,7 @@
 # AGENTS.md — conventions for agents working in this repo
 
 This is the master backup + migration-kit repo for the Hermes Agent stack on the OVH VPS
-(`vps-1558ffa7` / `vps-ovh.tail95f2ee.ts.net`). Working tree: `~/.hermes-git/hermes-config`.
+(`vps-1558ffa7` / `vps-ovh.tail95f2ee.ts.net`). Working tree: `~/.hermes-git/hermes-stack`.
 It is read-only with respect to the live `~/.hermes` — never symlink, never write back.
 
 ## Hard rules

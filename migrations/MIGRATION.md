@@ -53,8 +53,8 @@ Migration of the full Hermes + agent-vault stack from the OVH VPS
 1. base: ubuntu user, tailscale up, ufw/fail2ban basics
 2. vault:    migrations/agent-vault/import-vault.sh      (Option A exact move)
 3. hermes:   curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
-4. config:   gh auth login && gh repo clone abxba-org/hermes-config /root/hermes-config
-             rsync -a /root/hermes-config/ ~/.hermes/    # (or /home/hermes/.hermes)
+4. config:   gh auth login && gh repo clone abxba-org/hermes-stack /root/hermes-stack
+             rsync -a /root/hermes-stack/ ~/.hermes/    # (or /home/hermes/.hermes)
 5. secrets:  re-enter .env values (SLACK_*, HEVY, RESTIC), run upstream/scripts/wire-env.py
 6. gateway:  upstream/scripts/hermes-gateway.system-unit + nftables av-hermes (uid match!)
 7. host extras: crontab.txt, gitconfig, HEVY clone, composio link, alloy re-point

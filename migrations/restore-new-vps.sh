@@ -21,8 +21,8 @@ read -r
 
 banner "1. Vault — exact move"
 echo "  Run as root on the NEW VPS:"
-echo "    git clone https://github.com/abxba-org/hermes-config /root/hermes-config"
-echo "    bash /root/hermes-config/migrations/agent-vault/import-vault.sh"
+echo "    git clone https://github.com/abxba-org/hermes-stack /root/hermes-stack"
+echo "    bash /root/hermes-stack/migrations/agent-vault/import-vault.sh"
 echo "  VERIFY per migrations/agent-vault/VAULT-MIGRATION.md step 5."
 read -r -p "  Vault imported and verified? [y/N] " a; [ "${a:-n}" = y ] || exit 1
 

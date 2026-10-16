@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # agent-vault IMPORT — run on the NEW VPS as root.
 # Restores the exact vault state from export-vault.sh's bundle.
-# Assumes hermes-config repo cloned at /root/hermes-config (for vendored upstream scripts).
+# Assumes the hermes-stack repo is cloned at /root/hermes-stack (for vendored upstream scripts).
 set -euo pipefail
 umask 077
 
 BUNDLE=/root/vault-migration-bundle.tar.gz
-REPO=/root/hermes-config
+REPO=/root/hermes-stack
 STAGE=$(mktemp -d /root/vault-import.XXXXXX)
 trap 'rm -rf "$STAGE"' EXIT
 

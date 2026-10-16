@@ -17,7 +17,7 @@ fed via `--password-stdin` through `agent-vault-cred-wrapper`, nftables `inet av
      `/etc/av-hermes.nft`, version + unit files, `vault-mgmt` + wrapper binaries.
    - Restarts vault + gateway on the old box afterwards (no downtime beyond seconds).
 3. Copy over Tailscale only: `scp /root/vault-migration-bundle.tar.gz newvps:/root/`
-4. On the NEW VPS, as root: clone this repo to /root/hermes-config, then
+4. On the NEW VPS, as root: clone this repo to /root/hermes-stack, then
    `bash migrations/agent-vault/import-vault.sh`
 5. Post-import verification (from `upstream/docs/RUNBOOK.md` verification pattern):
    - `curl -s http://127.0.0.1:14321/v1/health` → up

@@ -8,7 +8,7 @@ transfer matrix; then follow this in order.
 
 - [ ] Skim `migrations/MIGRATION.md` — know what transfers vs what you re-enter.
 - [ ] Confirm the repo is current: `hermes cron list` shows the backup job active,
-      last push fresh on GitHub (`gh api repos/abxba-org/hermes-config/commits --jq '.[0].sha'`).
+      last push fresh on GitHub (`gh api repos/abxba-org/hermes-stack/commits --jq '.[0].sha'`).
 - [ ] Optional but recommended: add SLACK_APP_TOKEN + SLACK_BOT_TOKEN to the vault in
       one more `sudo vault-mgmt on` window (30 min auto-OFF), same as you did for
       RESTIC_PASSWORD / HEVY_API_KEY. Shrinks manual re-entry further.

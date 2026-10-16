@@ -8,7 +8,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 umask 077
 
 SRC=/home/ubuntu/.hermes
-WT=/home/ubuntu/.hermes-git/hermes-config
+WT=/home/ubuntu/.hermes-git/hermes-stack
 LOG=/home/ubuntu/.hermes-git/sync.log
 LOCK=/home/ubuntu/.hermes-git/.sync.lock
 

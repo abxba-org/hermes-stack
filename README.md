@@ -1,8 +1,17 @@
-# hermes-config
+# hermes-stack
 
 Versioned backup of the Hermes Agent configuration on the OVH VPS (`vps-1558ffa7` / `vps-ovh.tail95f2ee.ts.net`), and the master migration kit for the move to Contabo EU (`vps-contabo`).
 
 **Status (2026-10-16):** synced every 12h by the Hermes cron job `hermes-config-backup-sync` (job `0ed471b7d0b5`, script `scripts/backup-sync.sh`, pushes to `main`).
+
+## Repo layout — two zones
+
+- **Backup mirror (repo root, auto-synced every 12h):** files mirror the live
+  `~/.hermes` 1:1 (config.yaml, skills/, plugins/, memories/, profiles/, cron/, scripts/,
+  SOUL.md, PERSONAS.md, manifests, av-ca.pem). This mapping is the feature — the restore
+  is a single `rsync -a hermes-stack/ ~/.hermes/`. Do not restructure it.
+- **Migration kit (`migrations/`, hand-maintained):** plan docs, scripts, host snapshot,
+  vendored vault upstream. See `AGENTS.md` for conventions.
 
 ## What's tracked
 
@@ -21,8 +30,8 @@ Whitelist-style: ignore `/*`, then un-ignore tracked names. A stray future file 
 ## Restore (quick)
 
 ```bash
-gh repo clone abxba-org/hermes-config
-rsync -a hermes-config/ ~/.hermes/          # overlays; does not delete
+gh repo clone abxba-org/hermes-stack
+rsync -a hermes-stack/ ~/.hermes/          # overlays; does not delete
 chmod 600 ~/.hermes/config.yaml
 # Secrets (.env, auth.json) are NOT in the repo — restore them separately from a vault/backup.
 ```
@@ -45,4 +54,4 @@ Everything needed to move the stack to a new VPS lives in `migrations/` (full de
 
 ## Maintenance
 
-Re-run the copy + commit when config/skills/plugins change materially. The working tree lives at `~/.hermes-git/hermes-config` (copy, not symlinks — git never touches the live `~/.hermes`). The cron job handles routine sync; run `bash ~/.hermes-git/backup-sync.sh` by hand after big changes. Agent conventions for working in this repo: see `AGENTS.md`.
+Re-run the copy + commit when config/skills/plugins change materially. The working tree lives at `~/.hermes-git/hermes-stack` (copy, not symlinks — git never touches the live `~/.hermes`). The cron job handles routine sync; run `bash ~/.hermes-git/backup-sync.sh` by hand after big changes. Agent conventions for working in this repo: see `AGENTS.md`.
