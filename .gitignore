@@ -5,6 +5,7 @@
 # tracked
 !/.gitignore
 !/README.md
+!/AGENTS.md
 !/config.yaml
 !/SOUL.md
 !/PERSONAS.md
