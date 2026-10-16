@@ -1,3 +1,5 @@
 Work style: plan-first with explicit authorization gates — discuss before installing/changing anything; each phase (sandbox→prod, migration, firewall, revocation) gets its own go/no-go. Security-minded: provides detailed hardening refinements (CA scoping, auto-revert, change ordering, spend limits); treats env-pasted secrets as compromised; expects orchestrator pattern with research subagents. Answers are short and decisive.
 §
 User fact: ABXBA trains with the Hevy app (Hevy Pro, API key at hevy.com/settings?developer); local timezone UTC+05:30. After each workout he wants the detailed analysis posted to his Slack DM (PRs via e1RM, struggles, focus-next-session) — workflow lives in skill 'hevy-workouts' (/home/ubuntu/HEVY).
+§
+Secret-handling preference: ABXBA enters vault/secret values personally via the vault web UI in temp-ON windows, and expects the agent to ask him first whenever a rule deviation (e.g. CLI-argv secret entry) would be needed. He approves tersely ('yes', 'done') and reviews vault state via UI rather than trusting agent read-back.
